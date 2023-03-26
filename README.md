@@ -1,6 +1,8 @@
                 long unixTimeStamp = Convert.ToInt64(data["list"][i]["dt"]);
                 DateTime dateTime = DateTimeOffset.FromUnixTimeSeconds(unixTimeStamp).DateTime;
                 dataGridView1.Rows[0].Cells[i].Value = dateTime.ToString("ddd, dd MMM");
+                dataGridView1.Rows[1].Cells[i].Value = dateTime.ToString("hh:mm tt");
+                                
                 
                 for (int i = 0; i < 24; i++)
             {
